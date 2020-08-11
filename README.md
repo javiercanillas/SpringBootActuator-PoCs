@@ -1,4 +1,4 @@
-#PoC application
+# PoC applications
 
 ## Application
 PoC using Spring Boot 2.3.2 with Spring Actuator, exposing logging configuration to be able to change it using HTTP API.
