@@ -1,6 +1,6 @@
-package com.app.rest;
+package com.app.sqs.rest;
 
-import com.app.model.Message;
+import com.app.sqs.model.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

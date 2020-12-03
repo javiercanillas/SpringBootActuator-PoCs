@@ -1,13 +1,14 @@
-package com.app;
+package com.app.sqs;
 
 import com.amazonaws.services.sqs.AmazonSQSAsync;
-import com.app.sqs.Consumer;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.aws.messaging.config.annotation.EnableSqs;
 import org.springframework.cloud.aws.messaging.core.QueueMessagingTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+@ConditionalOnProperty(value = "queue.aws.sqs.enabled", havingValue = "true")
+@Configuration(value = "Real SQS spring configuration")
 @EnableSqs
 public class AppConfiguration {
 

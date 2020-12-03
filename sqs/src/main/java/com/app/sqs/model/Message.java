@@ -1,4 +1,4 @@
-package com.app.model;
+package com.app.sqs.model;
 
 import java.util.Date;
 

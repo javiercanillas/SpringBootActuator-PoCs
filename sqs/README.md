@@ -25,11 +25,11 @@ curl -X POST 'localhost:8080/producer/delay/10' -d'{ "content": "delayed text", 
 
 It will log something like the following since the root log level is INFO:
 ```text
-2020-11-27 13:11:14.198  INFO 29927 --- [nio-8080-exec-2] com.app.rest.ProducerController          : Produced: Message{content='FxdSLUXyBE', sentDate=Fri Nov 27 13:11:13 ART 2020}
+2020-11-27 13:11:14.198  INFO 29927 --- [nio-8080-exec-2] com.app.sqs.rest.ProducerController          : Produced: Message{content='FxdSLUXyBE', sentDate=Fri Nov 27 13:11:13 ART 2020}
 2020-11-27 13:11:14.228  INFO 29927 --- [enerContainer-2] com.app.sqs.Consumer                     : Consumed: Message{content='FxdSLUXyBE', sentDate=Fri Nov 27 13:11:13 ART 2020}
 ...
-2020-11-27 13:11:29.189  INFO 29927 --- [nio-8080-exec-5] com.app.rest.ProducerController          : Delaying message consumption by 10 secs.
-2020-11-27 13:11:29.587  INFO 29927 --- [nio-8080-exec-6] com.app.rest.ProducerController          : Produced: Message{content='I8K6bFtRmV', sentDate=Fri Nov 27 13:11:29 ART 2020}
+2020-11-27 13:11:29.189  INFO 29927 --- [nio-8080-exec-5] com.app.sqs.rest.ProducerController          : Delaying message consumption by 10 secs.
+2020-11-27 13:11:29.587  INFO 29927 --- [nio-8080-exec-6] com.app.sqs.rest.ProducerController          : Produced: Message{content='I8K6bFtRmV', sentDate=Fri Nov 27 13:11:29 ART 2020}
 2020-11-27 13:11:29.610  INFO 29927 --- [enerContainer-2] com.app.sqs.Consumer                     : Consumed: Message{content='I8K6bFtRmV', sentDate=Fri Nov 27 13:11:29 ART 2020}
 ...
 ```
